@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <div class="search-bar">
-            <input type="text" id="cityInput" placeholder="Enter city name">
-            <button onclick="getWeatherForecast()">Search</button>
+<body class="bg-gray-100">
+    <div class="mainheader text-3xl text-bold">Weather Dashboard</div>
+    <div class="container mx-auto p-8">
+        <div class="search-bar flex mb-4">
+            <input type="text" id="cityInput" placeholder="Enter city name" class="flex-grow px-4 py-2 border rounded-l-md">
+            <button onclick="getWeatherForecast()" class="px-4 py-2 bg-blue-500 text-white rounded-r-md">Search</button>
         </div>
-        <div class="currentdayweather" id="currday"></div>
-        <div class="weather-cards" id="weatherCards">
+        <div class="weather-cards flex flex-wrap -mx-2">
             <!-- Weather cards will be dynamically added here -->
         </div>
     </div>
